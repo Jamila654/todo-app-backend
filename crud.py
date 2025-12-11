@@ -1,6 +1,6 @@
 from sqlmodel import select, or_
-from .models import Task
-from .database import get_session
+from models import Task
+from database import get_session
 
 def get_tasks(search="", status="", priority="", tag="", sort="due"):
     with next(get_session()) as session:

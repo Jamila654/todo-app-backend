@@ -1,9 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .database import create_db_and_tables
-from .crud import get_tasks, create_task, update_task, delete_task
-from .models import Task
-
+from database import create_db_and_tables
+from models import Task
+from crud import get_tasks, create_task, update_task, delete_task
 app = FastAPI()
 
 app.add_middleware(
